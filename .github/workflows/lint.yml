@@ -16,4 +16,4 @@ jobs:
       - name: Install dependencies
         run: pip3 install -r requirements.txt
       - name: Run linter
-        run: flake8 ./*.py
+        run: flake8 src

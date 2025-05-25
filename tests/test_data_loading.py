@@ -2,7 +2,7 @@ import sys
 import os
 
 # Add the project root directory to the system path for all tests
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+sys.path.append(os.path.dirname(os.path.dirname(__file__)) + "/src")
 
 from data_loading import load_and_process_data
 
