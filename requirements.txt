@@ -3,3 +3,4 @@ scikit-learn
 pytest
 pytest-cov
 flake8
+bandit

@@ -23,6 +23,28 @@ jobs:
       - name: Run tests
         run: pytest tests
 
+  # notify:
+  #   runs-on: ubuntu-latest
+  #   needs: tests
+  #   if: always()
+
+  #   steps:
+  #     - name: Set Slack message
+  #       id: slack-message
+  #       run: |
+  #         if [ "${{ needs.build.result }}" == "success" ]; then
+  #           echo "message=Build succeeded!" >> $GITHUB_OUTPUT
+  #         else
+  #           echo "message=Build failed!" >> $GITHUB_OUTPUT
+  #         fi
+
+  #     - name: Send Slack notification
+  #       uses: slackapi/slack-github-action@v2
+  #       with:
+  #         channel-id: 'xyz'
+  #         slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
+  #         text: ${{ steps.slack-message.outputs.message }}
+
   coverage:
     runs-on: ubuntu-latest
     needs: tests
